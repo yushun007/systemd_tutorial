@@ -1,0 +1,12 @@
+[Unit]
+Description=test
+
+[Service]
+Type=simple
+ExecStart=/tmp/main start
+ExecReload=/tmp/main reload
+ExecStop=/tmp/main stop
+StartLimitIntervalBurst=5
+KillMode=Process
+RestartSec=5
+Restart=no-failure
